@@ -11,7 +11,7 @@
     "test": "node scripts/validate-templates.mjs && node scripts/test-gutenkit-samples.mjs"
   },
   "devDependencies": {
-    "@kitsy/guten": "0.2.5"
+    "@kitsy/guten": "0.2.7"
   },
   "repository": {
     "type": "git",

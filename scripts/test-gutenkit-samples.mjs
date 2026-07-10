@@ -4,7 +4,7 @@ import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { dirname } from "node:path";
 
-const REQUIRE_GUTEN_VERSION = "0.2.5";
+const REQUIRE_GUTEN_VERSION = "0.2.7";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const TEMPLATES_ROOT = join(ROOT, "templates");
 const SAMPLE_LIMIT = 3;
