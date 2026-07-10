@@ -71,7 +71,7 @@ if (-not $skipTests) {
 
 Step 'Bump version'
 $raw = Get-Content package.json -Raw
-$updated = ($raw -replace '"version"\s*:\s*"[^"]+"', '"version": "' + $newVersion + '"')
+$updated = ($raw -replace '"version"\s*:\s*"[^"]+"', ('"version": "' + $newVersion + '"'))
 [System.IO.File]::WriteAllText('package.json', $updated, $utf8NoBom)
 
 Step 'Commit + push'
