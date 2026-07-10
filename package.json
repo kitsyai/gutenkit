@@ -8,7 +8,10 @@
     "README.md"
   ],
   "scripts": {
-    "test": "node scripts/validate-templates.mjs"
+    "test": "node scripts/validate-templates.mjs && node scripts/test-gutenkit-samples.mjs"
+  },
+  "devDependencies": {
+    "@kitsy/guten": "0.2.5"
   },
   "repository": {
     "type": "git",
