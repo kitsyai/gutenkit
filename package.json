@@ -1,0 +1,20 @@
+{
+  "name": "@kitsy/gutenkit",
+  "version": "0.2.4",
+  "description": "Template pack for the guten ecosystem.",
+  "license": "MIT",
+  "files": [
+    "templates",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node scripts/validate-templates.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kitsyai/gutenkit"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

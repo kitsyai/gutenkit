@@ -67,3 +67,27 @@ change (plus `theme.json` / `--theme` / `--css` for styling).
 Add a bundle under `templates/<name>/`, register it in `templates/index.json`,
 keep it brand-neutral (all brand/data supplied at render time), and include a
 `sample.json`.
+
+## Releases
+
+Template releases are versioned and published to npm as `@kitsy/gutenkit`.
+
+Install:
+
+```
+npm install @kitsy/gutenkit
+```
+
+Run:
+
+- `scripts/release.sh major|minor|patch|X.Y.Z`
+- `scripts/release.ps1 major|minor|patch|X.Y.Z`
+
+The scripts:
+
+1. bump `package.json` version,
+2. commit and push `main`,
+3. create `vX.Y.Z`,
+4. push the tag.
+
+NPM publish is handled by GitHub Actions when `v*` is pushed.
