@@ -10,7 +10,10 @@ const TEMPLATES_ROOT = join(ROOT, "templates");
 const SAMPLE_LIMIT = 3;
 
 const require = createRequire(import.meta.url);
-const { version: gutenVersion } = require("@kitsy/guten/package.json");
+const gutenEntryPath = require.resolve("@kitsy/guten");
+const { version: gutenVersion } = JSON.parse(
+  readFileSync(join(dirname(gutenEntryPath), "..", "package.json"), "utf8"),
+);
 if (gutenVersion !== REQUIRE_GUTEN_VERSION) {
   throw new Error(`expected @kitsy/guten@${REQUIRE_GUTEN_VERSION}, got @kitsy/guten@${gutenVersion}`);
 }
