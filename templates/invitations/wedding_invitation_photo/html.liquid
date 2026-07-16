@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+:root{--font:{{ theme.font_family | default: "'Avenir Next','Segoe UI',sans-serif" }};--display:{{ theme.script_font_family | default: "'Playfair Display',Georgia,serif" }};--bg:{{ theme.bg_color | default:"#efe3cf" }};--paper:{{ theme.paper_color | default:"#f7eddc" }};--text:{{ theme.text_color | default:"#293041" }};--muted:{{ theme.muted_color | default:"#6f6a61" }};--accent:{{ theme.accent_color | default:"#1f3557" }};--soft:{{ theme.secondary_accent_color | default:"#c99169" }};--border:{{ theme.border_color | default:"#d6c2a2" }};}
+    @page{size:5in 7in;margin:0}
+    *{box-sizing:border-box} body{margin:0;min-height:100vh;padding:24px;background:var(--bg);font-family:var(--font);color:var(--text);display:flex;justify-content:center;align-items:flex-start}
+    .card{width:5in;min-height:7in;margin:0;background:var(--paper);border:1px solid var(--border);border-radius:24px;padding:26px;box-shadow:0 18px 50px rgba(80,63,39,.10)}
+    .layout{display:grid;grid-template-columns:1fr 320px;gap:28px;align-items:center}
+    .eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+    .name{margin:0;font-family:var(--display);font-size:64px;line-height:1;color:var(--accent)}
+    .join{font-size:34px;color:var(--soft);margin:6px 0 8px}.message{font-size:19px;line-height:1.8;color:var(--muted);max-width:460px;margin:18px 0 20px}
+    .meta{font-size:18px;line-height:1.8;border-top:1px solid var(--border);padding-top:16px;max-width:420px}
+    .photo{position:relative;height:420px;border:1px solid var(--border);border-radius:18px;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.74),rgba(224,205,178,.35));display:grid;place-items:center}
+    .photo:before,.photo:after{content:"";position:absolute;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(201,145,105,.24) 0 10%,transparent 11%),radial-gradient(circle at 30% 30%,rgba(31,53,87,.12),transparent 55%)}
+    .photo:before{top:-40px;left:-40px}.photo:after{bottom:-40px;right:-40px}
+    .placeholder{width:220px;height:300px;border:1px dashed rgba(31,53,87,.35);border-radius:8px;display:grid;place-items:center;font-size:20px;color:var(--accent);font-family:var(--display);background:rgba(255,255,255,.46);text-align:center;padding:20px}
+    .footer{margin-top:14px;color:var(--muted);font-size:15px}
+    @media (max-width:760px){.layout{grid-template-columns:1fr}.name{font-size:46px}.photo{height:300px}.placeholder{height:220px}}
+  </style></head><body><div class="card"><div class="layout"><div><div class="eyebrow">{{ eyebrow }}</div><p class="name">{{ couple.partner_one }}</p><div class="join">&amp;</div><p class="name">{{ couple.partner_two }}</p><div class="message">{{ message }}</div><div class="meta">{{ date_line }}<br>{{ venue_line }}</div><div class="footer">{{ footer_note }}</div></div><div class="photo"><div class="placeholder">{{ photo_label }}</div></div></div></div><script data-preview-fit="true">
+(function(){
+  function boot(){
+    const root = document.body && document.body.firstElementChild;
+    if (!root || document.body.dataset.previewFitApplied) return;
+    document.body.dataset.previewFitApplied = 'true';
+
+    const style = document.createElement('style');
+    style.textContent = [
+      'html,body{height:100%;}',
+      'body{overflow:hidden !important;padding:0 !important;display:block !important;min-height:100vh !important;}',
+      '.preview-shell{width:100vw;height:100vh;display:flex;justify-content:center;align-items:center;padding:20px;overflow:hidden;background:inherit;}',
+      '.preview-stage{transform-origin:center center;will-change:transform;}',
+      '@media (max-width:640px){.preview-shell{padding:12px;}}'
+    ].join('');
+    document.head.appendChild(style);
+
+    const shell = document.createElement('div');
+    shell.className = 'preview-shell';
+    const stage = document.createElement('div');
+    stage.className = 'preview-stage';
+
+    document.body.insertBefore(shell, root);
+    shell.appendChild(stage);
+    stage.appendChild(root);
+
+    function fit(){
+      stage.style.transform = 'none';
+      stage.style.width = 'auto';
+      const bounds = root.getBoundingClientRect();
+      const naturalWidth = Math.max(root.scrollWidth, root.offsetWidth, Math.ceil(bounds.width));
+      const naturalHeight = Math.max(root.scrollHeight, root.offsetHeight, Math.ceil(bounds.height));
+      const shellWidth = Math.max(shell.clientWidth - 24, 0);
+      const shellHeight = Math.max(shell.clientHeight - 24, 0);
+      const scale = Math.min(shellWidth / naturalWidth, shellHeight / naturalHeight, 1);
+      stage.style.width = naturalWidth + 'px';
+      stage.style.height = naturalHeight + 'px';
+      stage.style.transform = 'scale(' + Math.max(scale * 0.96, 0.01) + ')';
+    }
+
+    requestAnimationFrame(() => requestAnimationFrame(fit));
+    window.addEventListener('resize', fit);
+    window.addEventListener('load', fit, { once: true });
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(fit).catch(() => {});
+    }
+    setTimeout(fit, 120);
+    setTimeout(fit, 400);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot, { once: true });
+  } else {
+    boot();
+  }
+})();
+</script>
+</body></html>

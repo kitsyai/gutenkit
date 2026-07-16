@@ -1,0 +1,9 @@
+{
+  "name": "formal_invitation_regency",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Regency formal invitation with a navy-and-gold crest layout, centered typography, and gala styling.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

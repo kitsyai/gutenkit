@@ -1,0 +1,9 @@
+{
+  "name": "formal_invitation_gilded",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Gilded formal invitation with an arched champagne layout, ceremonial framing, and premium dinner presentation.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

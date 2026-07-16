@@ -1,0 +1,9 @@
+{
+  "name": "ring_ceremony_invitation_twilight",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Twilight ring ceremony invitation with plum dusk tones and an evening story layout.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

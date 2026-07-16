@@ -1,0 +1,14 @@
+{
+  "font_family": "'Cormorant Garamond', 'Georgia', serif",
+  "script_font_family": "'Great Vibes', 'Segoe Script', cursive",
+  "bg_color": "#fdf2e3",
+  "paper_color": "#fffaf2",
+  "text_color": "#5a3426",
+  "muted_color": "#9d6d4f",
+  "accent_color": "#b36a22",
+  "secondary_accent_color": "#d99b47",
+  "rose_color": "#e7c3d1",
+  "lotus_color": "#ee9db1",
+  "border_color": "#efc78c",
+  "line_color": "#d4a35e"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "wedding_invitation_royal",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Royal wedding invitation with jewel tones, layered floral ornaments, and a formal event presentation.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "birthday_invitation_confetti",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Playful birthday invitation with confetti bursts, layered circles, and candy-bright party energy.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

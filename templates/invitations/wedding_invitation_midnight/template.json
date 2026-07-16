@@ -1,0 +1,9 @@
+{
+  "name": "wedding_invitation_midnight",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Midnight luxe invitation with deep navy tones, star accents, and a formal evening ceremony layout.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

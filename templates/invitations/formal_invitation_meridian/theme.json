@@ -1,0 +1,11 @@
+{
+  "font_family": "'Segoe UI', sans-serif",
+  "display_font_family": "'Constantia', serif",
+  "bg_color": "#dfeeed",
+  "paper_color": "#fbfffe",
+  "text_color": "#183436",
+  "muted_color": "#5f7c7d",
+  "accent_color": "#117878",
+  "secondary_accent_color": "#d0ece9",
+  "border_color": "#b6ddd8"
+}

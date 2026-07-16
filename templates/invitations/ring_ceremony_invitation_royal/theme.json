@@ -1,0 +1,11 @@
+{
+  "font_family": "'Garamond', 'Georgia', serif",
+  "script_font_family": "'Palace Script MT', 'Brush Script MT', cursive",
+  "bg_color": "#f3efe6",
+  "paper_color": "#fffaf1",
+  "text_color": "#4e3526",
+  "muted_color": "#8a6a43",
+  "accent_color": "#0f5c4b",
+  "secondary_accent_color": "#d6b36e",
+  "border_color": "#dcc39c"
+}

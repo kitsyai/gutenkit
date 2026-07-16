@@ -1,0 +1,9 @@
+{
+  "name": "formal_invitation_slate",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Slate formal invitation with editorial asymmetry, cool neutrals, and a modern executive event layout.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

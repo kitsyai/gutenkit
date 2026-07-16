@@ -1,0 +1,49 @@
+{
+  "title": "Wedding Invitation",
+  "couple": {
+    "partner_one": "Aarav Mehta",
+    "partner_two": "Siya Sharma"
+  },
+  "host_line": "Together with their families",
+  "invitation_message": "request the honor of your presence as they celebrate their wedding ceremony and begin their new journey with blessings, music, and joy.",
+  "date_line": "Sunday, 18 February 2027",
+  "time_line": "Muhurat at 7:30 PM onwards",
+  "venue_name": "The Royal Courtyard",
+  "venue_address": "Palace Road, Jaipur, Rajasthan",
+  "rsvp": {
+    "label": "RSVP",
+    "primary_name": "Rohan Mehta",
+    "primary_phone": "+91 98765 43210",
+    "secondary_name": "Neha Sharma",
+    "secondary_phone": "+91 91234 56789"
+  },
+  "families": {
+    "partner_one_side": "Son of Meera and Rajesh Mehta",
+    "partner_two_side": "Daughter of Kavita and Suresh Sharma"
+  },
+  "events": [
+    {
+      "name": "Mehendi",
+      "day": "Friday",
+      "date": "16 February 2027",
+      "time": "4:00 PM",
+      "detail": "An afternoon of colors, laughter, and family rituals."
+    },
+    {
+      "name": "Sangeet",
+      "day": "Saturday",
+      "date": "17 February 2027",
+      "time": "7:00 PM",
+      "detail": "Music, dance, and celebration with loved ones."
+    },
+    {
+      "name": "Wedding Ceremony",
+      "day": "Sunday",
+      "date": "18 February 2027",
+      "time": "7:30 PM",
+      "detail": "Varmala, pheras, blessings, and dinner to follow."
+    }
+  ],
+  "dress_code": "Traditional festive attire",
+  "closing_note": "Your presence and blessings will make our celebration truly complete."
+}

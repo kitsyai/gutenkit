@@ -1,0 +1,9 @@
+{
+  "name": "wedding_invitation",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Traditional wedding invitation with floral framing, ceremony schedule, family details, and RSVP footer.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

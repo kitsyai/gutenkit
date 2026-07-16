@@ -1,0 +1,74 @@
+{
+  "eyebrow": "Sacred Union",
+  "title": "Wedding Celebration",
+  "couple": {
+    "partner_one": "Ishaan Verma",
+    "partner_two": "Ananya Kapoor"
+  },
+  "invited_by": "With immense joy, the Verma and Kapoor families",
+  "invite_line": "With immense joy, the Verma and Kapoor families",
+  "message": "invite you to witness a celebration of love, tradition, and blessings as their children are united in marriage.",
+  "wedding_day": "Saturday, 12 December 2027",
+  "wedding_time": "Baraat from 6:30 PM | Pheras at 8:15 PM",
+  "wedding_venue": "Maharaja Heritage Palace",
+  "wedding_address": "Lake View Estate, Udaipur, Rajasthan",
+  "main_event": {
+    "date": "Saturday, 12 December 2027",
+    "time": "Baraat from 6:30 PM | Pheras at 8:15 PM"
+  },
+  "venue": {
+    "name": "Maharaja Heritage Palace",
+    "address": "Lake View Estate, Udaipur, Rajasthan"
+  },
+  "blessing_line": "Join us for an evening of floral decor, candlelight, music, and timeless wedding rituals.",
+  "families": {
+    "groom": "Son of Sunita and Vikram Verma",
+    "bride": "Daughter of Pooja and Rakesh Kapoor"
+  },
+  "host_names": {
+    "one": "Son of Sunita and Vikram Verma",
+    "two": "Daughter of Pooja and Rakesh Kapoor"
+  },
+  "highlights": [
+    "Grand floral entrance and rose-petal welcome",
+    "Live sangeet ensemble and ceremonial varmala",
+    "Traditional dinner and dessert pavilion"
+  ],
+  "secondary_event": {
+    "name": "Reception Notes",
+    "detail": "Royal festive attire and elegant family hosting."
+  },
+  "events": [
+    {
+      "name": "Haldi",
+      "timing": "Thursday | 10 December 2027 | 11:00 AM",
+      "day": "Thursday",
+      "time": "11:00 AM",
+      "description": "A bright and joyful morning ceremony filled with marigolds, laughter, and blessings.",
+      "detail": "A bright and joyful morning ceremony filled with marigolds, laughter, and blessings."
+    },
+    {
+      "name": "Sangeet Night",
+      "timing": "Friday | 11 December 2027 | 7:30 PM",
+      "day": "Friday",
+      "time": "7:30 PM",
+      "description": "An evening of performances, music, and family celebrations under warm lights.",
+      "detail": "An evening of performances, music, and family celebrations under warm lights."
+    },
+    {
+      "name": "Wedding Ceremony",
+      "timing": "Saturday | 12 December 2027 | 6:30 PM onward",
+      "day": "Saturday",
+      "time": "6:30 PM onward",
+      "description": "Baraat procession, varmala, sacred pheras, blessings, and a royal dinner reception.",
+      "detail": "Baraat procession, varmala, sacred pheras, blessings, and a royal dinner reception."
+    }
+  ],
+  "dress_code": "Royal festive attire",
+  "rsvp": {
+    "title": "Kindly Confirm",
+    "contact_one": "Naina Verma | +91 99887 77665",
+    "contact_two": "Arjun Kapoor | +91 90909 11223"
+  },
+  "footer_note": "Your gracious presence will be cherished as part of our family’s happiest celebration."
+}

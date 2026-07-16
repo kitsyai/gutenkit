@@ -1,0 +1,12 @@
+{
+  "font_family": "'Segoe UI', sans-serif",
+  "display_font_family": "'Georgia', serif",
+  "bg_color": "#eef5ff",
+  "paper_color": "#ffffff",
+  "text_color": "#2d3658",
+  "muted_color": "#7781a8",
+  "accent_color": "#8f7cff",
+  "accent_two_color": "#39d6ff",
+  "accent_three_color": "#ffd166",
+  "border_color": "#d9e1ff"
+}

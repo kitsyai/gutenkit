@@ -1,0 +1,9 @@
+{
+  "name": "ring_ceremony_invitation_mughal",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Mughal-style ring ceremony invitation with rich maroon tones and ornate arches.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

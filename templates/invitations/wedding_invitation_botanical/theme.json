@@ -1,0 +1,12 @@
+{
+  "font_family": "'Cormorant Garamond', 'Georgia', serif",
+  "script_font_family": "'Segoe Script', 'Lucida Handwriting', cursive",
+  "bg_color": "#eef3ea",
+  "paper_color": "#fffdf8",
+  "text_color": "#314239",
+  "muted_color": "#68796f",
+  "accent_color": "#607a5f",
+  "secondary_accent_color": "#c9956a",
+  "leaf_color": "#dbe7d8",
+  "border_color": "#b9c9b4"
+}

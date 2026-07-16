@@ -1,0 +1,9 @@
+{
+  "name": "formal_invitation_velvet",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Velvet formal invitation with burgundy layering, dramatic contrast, and a rich fundraising-ball presentation.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

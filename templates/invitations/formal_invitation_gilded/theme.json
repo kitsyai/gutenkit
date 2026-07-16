@@ -1,0 +1,11 @@
+{
+  "font_family": "'Verdana', sans-serif",
+  "display_font_family": "'Didot', 'Bodoni MT', serif",
+  "bg_color": "#f1e4cf",
+  "paper_color": "#fff9f1",
+  "text_color": "#4c3b21",
+  "muted_color": "#8a7350",
+  "accent_color": "#b58a3b",
+  "secondary_accent_color": "#6f4e37",
+  "border_color": "#e5d2aa"
+}

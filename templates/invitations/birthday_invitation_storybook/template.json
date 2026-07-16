@@ -1,0 +1,9 @@
+{
+  "name": "birthday_invitation_storybook",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Storybook birthday invitation with ribbon details, framed panels, and whimsical fairytale charm.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

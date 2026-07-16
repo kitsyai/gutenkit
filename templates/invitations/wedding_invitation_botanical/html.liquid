@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+:root{
+      --font: {{ theme.font_family | default: "'Cormorant Garamond', 'Georgia', serif" }};
+      --script-font: {{ theme.script_font_family | default: "'Segoe Script', 'Lucida Handwriting', cursive" }};
+      --bg: {{ theme.bg_color | default: "#eef3ea" }};
+      --paper: {{ theme.paper_color | default: "#fffdf8" }};
+      --text: {{ theme.text_color | default: "#314239" }};
+      --muted: {{ theme.muted_color | default: "#68796f" }};
+      --accent: {{ theme.accent_color | default: "#607a5f" }};
+      --accent-2: {{ theme.secondary_accent_color | default: "#c9956a" }};
+      --leaf: {{ theme.leaf_color | default: "#dbe7d8" }};
+      --border: {{ theme.border_color | default: "#b9c9b4" }};
+    }
+    @page{size:5in 7in;margin:0}
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      padding:24px;
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+      background:
+        radial-gradient(circle at top left, rgba(96,122,95,0.10), transparent 18%),
+        radial-gradient(circle at bottom right, rgba(201,149,106,0.12), transparent 22%),
+        linear-gradient(180deg, #f7fbf5 0%, var(--bg) 100%);
+      color:var(--text);
+      font-family:var(--font);
+    }
+    .card{
+      width:5in;
+      min-height:7in;
+      background:var(--paper);
+      border:1px solid var(--border);
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:0 24px 70px rgba(70,89,77,0.10);
+    }
+    .hero{
+      position:relative;
+      padding:18px 20px 16px;
+      background:
+        linear-gradient(180deg, rgba(96,122,95,0.92), rgba(96,122,95,0.82)),
+        linear-gradient(135deg, rgba(255,255,255,0.08), transparent);
+      color:#f5f6ef;
+      text-align:center;
+    }
+    .hero:before,
+    .hero:after{
+      content:"";
+      position:absolute;
+      width:110px;
+      height:110px;
+      border-radius:50%;
+      border:1px solid rgba(255,255,255,0.12);
+      background:rgba(255,255,255,0.04);
+    }
+    .hero:before{top:-54px;left:-42px}
+    .hero:after{right:-38px;bottom:-60px}
+    .eyebrow{
+      position:relative;
+      z-index:1;
+      margin:0 0 6px;
+      font-size:10px;
+      letter-spacing:0.28em;
+      text-transform:uppercase;
+      color:#f7f7f1;
+    }
+    .host{
+      position:relative;
+      z-index:1;
+      margin:0;
+      font-size:14px;
+      line-height:1.35;
+      font-style:italic;
+      color:rgba(245,246,239,0.9);
+    }
+    .names{
+      position:relative;
+      z-index:1;
+      margin:12px 0 10px;
+    }
+    .name{
+      margin:0;
+      font-family:var(--script-font);
+      font-size:34px;
+      line-height:1.05;
+      font-weight:400;
+      color:#ffffff;
+    }
+    .join{
+      margin:6px 0;
+      font-size:10px;
+      letter-spacing:0.28em;
+      text-transform:uppercase;
+      color:#f4d9be;
+    }
+    .message{
+      position:relative;
+      z-index:1;
+      margin:0 auto;
+      max-width:250px;
+      font-size:12px;
+      line-height:1.45;
+      color:rgba(245,246,239,0.92);
+    }
+    .content{
+      padding:14px 14px 12px;
+      display:grid;
+      gap:10px;
+    }
+    .facts{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:8px;
+    }
+    .fact{
+      border:1px solid rgba(185,201,180,0.85);
+      border-radius:16px;
+      padding:10px 12px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.92), rgba(247,251,245,0.96));
+    }
+    .label{
+      margin:0 0 3px;
+      font-size:9px;
+      letter-spacing:0.18em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+    .value{
+      margin:0;
+      font-size:12px;
+      line-height:1.4;
+    }
+    .split{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:8px;
+    }
+    .panel{
+      border:1px solid rgba(185,201,180,0.85);
+      border-radius:16px;
+      padding:10px 12px;
+      background:rgba(255,255,255,0.86);
+    }
+    .title{
+      margin:0 0 7px;
+      font-size:14px;
+      line-height:1.1;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      color:var(--accent);
+    }
+    .schedule{
+      display:grid;
+      gap:7px;
+    }
+    .event{
+      display:grid;
+      grid-template-columns:48px 1fr;
+      gap:8px;
+      align-items:start;
+      padding-top:7px;
+      border-top:1px solid rgba(185,201,180,0.42);
+    }
+    .event:first-child{
+      border-top:0;
+      padding-top:0;
+    }
+    .event-time{
+      font-size:10px;
+      line-height:1.25;
+      color:var(--accent-2);
+      font-weight:700;
+    }
+    .event-name{
+      margin:0 0 2px;
+      font-size:11px;
+      line-height:1.2;
+      color:var(--accent);
+      font-weight:700;
+    }
+    .event-detail,
+    .panel p,
+    .panel li{
+      margin:0;
+      font-size:10px;
+      line-height:1.4;
+    }
+    .panel ul{
+      margin:0;
+      padding-left:14px;
+      display:grid;
+      gap:5px;
+    }
+    .rsvp{
+      border:1px solid rgba(185,201,180,0.85);
+      border-radius:16px;
+      padding:10px 12px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.94), rgba(246,250,244,0.96));
+      text-align:center;
+    }
+    .rsvp-line{
+      font-size:10px;
+      line-height:1.45;
+      margin:0;
+    }
+    .footer-note{
+      margin-top:6px;
+      font-size:10px;
+      line-height:1.4;
+      color:var(--muted);
+    }
+    @media (max-width:540px){
+      body{padding:12px}
+      .card{width:100%;min-height:auto}
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <section class="hero">
+      <p class="eyebrow">{{ eyebrow | default: "Garden Wedding" }}</p>
+      <p class="host">{{ host_line | default: "Together with their families" }}</p>
+      <div class="names">
+        <p class="name">{{ couple.partner_one | default: "Partner One" }}</p>
+        <div class="join">and</div>
+        <p class="name">{{ couple.partner_two | default: "Partner Two" }}</p>
+      </div>
+      <p class="message">{{ message | default: "joyfully invite you to an intimate wedding celebration filled with flowers, blessings, and the warmth of loved ones." }}</p>
+    </section>
+
+    <section class="content">
+      <div class="facts">
+        <div class="fact">
+          <p class="label">Date</p>
+          <p class="value">{{ date_line | default: "Sunday, 14 March 2027" }}</p>
+        </div>
+        <div class="fact">
+          <p class="label">Time</p>
+          <p class="value">{{ time_line | default: "Ceremony at 5:30 PM | Dinner at 8:00 PM" }}</p>
+        </div>
+        <div class="fact">
+          <p class="label">Venue</p>
+          <p class="value">{{ venue_name | default: "The Glasshouse Garden Estate" }}</p>
+          <p class="value">{{ venue_address | default: "Dehradun, Uttarakhand" }}</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2 class="title">Ceremony Flow</h2>
+        <div class="schedule">
+          {% for item in schedule %}
+          <div class="event">
+            <div class="event-time">{{ item.time }}</div>
+            <div>
+              <div class="event-name">{{ item.name }}</div>
+              <div class="event-detail">{{ item.detail }}</div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="split">
+        <div class="panel">
+          <h2 class="title">Family</h2>
+          {% for line in family_lines %}
+          <p>{{ line }}</p>
+          {% endfor %}
+        </div>
+        <div class="panel">
+          <h2 class="title">Highlights</h2>
+          <ul>
+            {% for item in event_highlights %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <div class="rsvp">
+        <h2 class="title">{{ rsvp_title | default: "Please RSVP" }}</h2>
+        {% for line in rsvp_lines %}
+        <p class="rsvp-line">{{ line }}</p>
+        {% endfor %}
+        <div class="footer-note">{{ footer_note | default: "Your presence will make our garden celebration even more beautiful." }}</div>
+      </div>
+    </section>
+  <script data-preview-fit="true">
+(function(){
+  function boot(){
+    const root = document.body && document.body.firstElementChild;
+    if (!root || document.body.dataset.previewFitApplied) return;
+    document.body.dataset.previewFitApplied = 'true';
+
+    const style = document.createElement('style');
+    style.textContent = [
+      'html,body{height:100%;}',
+      'body{overflow:hidden !important;padding:0 !important;display:block !important;min-height:100vh !important;}',
+      '.preview-shell{width:100vw;height:100vh;display:flex;justify-content:center;align-items:center;padding:20px;overflow:hidden;background:inherit;}',
+      '.preview-stage{transform-origin:center center;will-change:transform;}',
+      '@media (max-width:640px){.preview-shell{padding:12px;}}'
+    ].join('');
+    document.head.appendChild(style);
+
+    const shell = document.createElement('div');
+    shell.className = 'preview-shell';
+    const stage = document.createElement('div');
+    stage.className = 'preview-stage';
+
+    document.body.insertBefore(shell, root);
+    shell.appendChild(stage);
+    stage.appendChild(root);
+
+    function fit(){
+      stage.style.transform = 'none';
+      stage.style.width = 'auto';
+      const bounds = root.getBoundingClientRect();
+      const naturalWidth = Math.max(root.scrollWidth, root.offsetWidth, Math.ceil(bounds.width));
+      const naturalHeight = Math.max(root.scrollHeight, root.offsetHeight, Math.ceil(bounds.height));
+      const shellWidth = Math.max(shell.clientWidth - 24, 0);
+      const shellHeight = Math.max(shell.clientHeight - 24, 0);
+      const scale = Math.min(shellWidth / naturalWidth, shellHeight / naturalHeight, 1);
+      stage.style.width = naturalWidth + 'px';
+      stage.style.height = naturalHeight + 'px';
+      stage.style.transform = 'scale(' + Math.max(scale * 0.96, 0.01) + ')';
+    }
+
+    requestAnimationFrame(() => requestAnimationFrame(fit));
+    window.addEventListener('resize', fit);
+    window.addEventListener('load', fit, { once: true });
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(fit).catch(() => {});
+    }
+    setTimeout(fit, 120);
+    setTimeout(fit, 400);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot, { once: true });
+  } else {
+    boot();
+  }
+})();
+</script>
+</body>
+</html>

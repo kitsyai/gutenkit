@@ -1,0 +1,9 @@
+{
+  "name": "ring_ceremony_invitation_minimal",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Minimal editorial ring ceremony invitation with clean contrast and modern calm.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

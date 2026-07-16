@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+:root{--font:{{ theme.font_family | default: "'Cormorant Garamond', 'Georgia', serif" }};--script:{{ theme.script_font_family | default: "'Great Vibes', 'Segoe Script', cursive" }};--bg:{{ theme.bg_color | default:"#f6f0fb" }};--paper:{{ theme.paper_color | default:"#fffdfd" }};--text:{{ theme.text_color | default:"#5e486c" }};--muted:{{ theme.muted_color | default:"#8f78a0" }};--accent:{{ theme.accent_color | default:"#a56db6" }};--soft:{{ theme.secondary_accent_color | default:"#ddb8e7" }};--border:{{ theme.border_color | default:"#e6d4f0" }};}
+    @page{size:5in 7in;margin:0}
+    *{box-sizing:border-box} body{margin:0;min-height:100vh;padding:24px;font-family:var(--font);background:linear-gradient(180deg,#fbf7fe 0%,var(--bg) 100%);color:var(--text);display:flex;justify-content:center;align-items:flex-start}
+    .card{width:5in;min-height:7in;margin:0;background:var(--paper);border:1px solid var(--border);border-radius:26px;padding:26px;box-shadow:0 24px 60px rgba(132,105,149,.10)}
+    .inner{position:relative;border:1px solid rgba(230,212,240,.9);border-radius:20px;padding:34px 28px 26px;overflow:hidden}
+    .petals:before,.petals:after{content:"";position:absolute;width:170px;height:170px;border-radius:50%;background:radial-gradient(circle,rgba(221,184,231,.5) 0 12%,transparent 13%),radial-gradient(circle at 30% 30%,rgba(165,109,182,.16),transparent 55%)}
+    .petals:before{top:-70px;left:-70px}.petals:after{right:-70px;bottom:-70px}
+    .top{text-align:center;position:relative;z-index:1}
+    .eyebrow{font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+    .ring{width:110px;height:110px;border-radius:50%;border:2px solid var(--soft);margin:18px auto;display:grid;place-items:center;box-shadow:inset 0 0 0 8px rgba(221,184,231,.18)}
+    .ring span{font-family:var(--script);font-size:26px;color:var(--accent);line-height:1.2;text-align:center}
+    .name{margin:0;font-family:var(--script);font-size:56px;color:var(--accent);line-height:1}
+    .join{margin:6px 0;color:var(--muted);font-size:18px;letter-spacing:.16em;text-transform:uppercase}
+    .message{max-width:520px;margin:14px auto 20px;text-align:center;font-size:20px;line-height:1.7}
+    .details{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;position:relative;z-index:1}
+    .detail{border:1px solid var(--border);border-radius:16px;padding:16px 12px;text-align:center;background:rgba(255,255,255,.78)}
+    .label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+    .value{font-size:18px;line-height:1.5}
+    .footer{text-align:center;margin-top:18px;color:var(--muted);font-size:16px}
+    @media (max-width:720px){.details{grid-template-columns:1fr}.name{font-size:44px}}
+  </style>
+</head>
+<body><div class="card"><div class="inner petals"><div class="top"><div class="eyebrow">{{ eyebrow }}</div><div class="ring"><span>{{ couple.partner_one }}<br>{{ couple.partner_two }}</span></div><p class="name">{{ couple.partner_one }}</p><div class="join">and</div><p class="name">{{ couple.partner_two }}</p><div class="message">{{ message }}</div></div><div class="details"><div class="detail"><div class="label">Date</div><div class="value">{{ weekday }}<br>{{ date_month }} {{ date_day }}, {{ date_year }}</div></div><div class="detail"><div class="label">Time</div><div class="value">{{ time_line }}</div></div><div class="detail"><div class="label">Venue</div><div class="value">{{ venue_name }}<br><span style="font-size:14px;color:var(--muted)">{{ venue_address }}</span></div></div></div><div class="footer">{{ footer_note }}</div></div></div><script data-preview-fit="true">
+(function(){
+  function boot(){
+    const root = document.body && document.body.firstElementChild;
+    if (!root || document.body.dataset.previewFitApplied) return;
+    document.body.dataset.previewFitApplied = 'true';
+
+    const style = document.createElement('style');
+    style.textContent = [
+      'html,body{height:100%;}',
+      'body{overflow:hidden !important;padding:0 !important;display:block !important;min-height:100vh !important;}',
+      '.preview-shell{width:100vw;height:100vh;display:flex;justify-content:center;align-items:center;padding:20px;overflow:hidden;background:inherit;}',
+      '.preview-stage{transform-origin:center center;will-change:transform;}',
+      '@media (max-width:640px){.preview-shell{padding:12px;}}'
+    ].join('');
+    document.head.appendChild(style);
+
+    const shell = document.createElement('div');
+    shell.className = 'preview-shell';
+    const stage = document.createElement('div');
+    stage.className = 'preview-stage';
+
+    document.body.insertBefore(shell, root);
+    shell.appendChild(stage);
+    stage.appendChild(root);
+
+    function fit(){
+      stage.style.transform = 'none';
+      stage.style.width = 'auto';
+      const bounds = root.getBoundingClientRect();
+      const naturalWidth = Math.max(root.scrollWidth, root.offsetWidth, Math.ceil(bounds.width));
+      const naturalHeight = Math.max(root.scrollHeight, root.offsetHeight, Math.ceil(bounds.height));
+      const shellWidth = Math.max(shell.clientWidth - 24, 0);
+      const shellHeight = Math.max(shell.clientHeight - 24, 0);
+      const scale = Math.min(shellWidth / naturalWidth, shellHeight / naturalHeight, 1);
+      stage.style.width = naturalWidth + 'px';
+      stage.style.height = naturalHeight + 'px';
+      stage.style.transform = 'scale(' + Math.max(scale * 0.96, 0.01) + ')';
+    }
+
+    requestAnimationFrame(() => requestAnimationFrame(fit));
+    window.addEventListener('resize', fit);
+    window.addEventListener('load', fit, { once: true });
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(fit).catch(() => {});
+    }
+    setTimeout(fit, 120);
+    setTimeout(fit, 400);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot, { once: true });
+  } else {
+    boot();
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "font_family": "'Georgia', 'Times New Roman', serif",
+  "script_font_family": "'Brush Script MT', 'Lucida Handwriting', cursive",
+  "bg_color": "#f8f1e7",
+  "paper_color": "#fffaf4",
+  "text_color": "#4a2f2a",
+  "muted_color": "#8b6b61",
+  "accent_color": "#a63d40",
+  "accent_soft_color": "#e8c9a7",
+  "border_color": "#d6b184"
+}

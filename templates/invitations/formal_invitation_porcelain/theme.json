@@ -1,0 +1,11 @@
+{
+  "font_family": "'Calibri', sans-serif",
+  "display_font_family": "'Cormorant Garamond', 'Times New Roman', serif",
+  "bg_color": "#e9f0f4",
+  "paper_color": "#ffffff",
+  "text_color": "#29465b",
+  "muted_color": "#6c8598",
+  "accent_color": "#6a94b2",
+  "secondary_accent_color": "#d9e8f2",
+  "border_color": "#bfd7e5"
+}

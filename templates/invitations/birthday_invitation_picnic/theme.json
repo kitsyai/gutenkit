@@ -1,0 +1,12 @@
+{
+  "font_family": "'Arial', sans-serif",
+  "display_font_family": "'Georgia', serif",
+  "bg_color": "#f7f1dd",
+  "paper_color": "#fffdf8",
+  "text_color": "#3c4332",
+  "muted_color": "#6d7558",
+  "accent_color": "#d75b4d",
+  "accent_two_color": "#7ab55c",
+  "accent_three_color": "#f2d27a",
+  "border_color": "#e7ddc0"
+}

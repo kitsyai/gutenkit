@@ -1,0 +1,9 @@
+{
+  "name": "formal_invitation_nocturne",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Nocturne formal invitation with a dark concert-poster layout, luminous type, and evening program bands.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

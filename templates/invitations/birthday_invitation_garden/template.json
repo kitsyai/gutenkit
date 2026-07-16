@@ -1,0 +1,9 @@
+{
+  "name": "birthday_invitation_garden",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Garden birthday invitation with watercolor florals, soft framing, and a fresh daytime layout.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

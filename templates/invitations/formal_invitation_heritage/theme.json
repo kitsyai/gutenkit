@@ -1,0 +1,11 @@
+{
+  "font_family": "'Tahoma', sans-serif",
+  "display_font_family": "'Book Antiqua', Georgia, serif",
+  "bg_color": "#efe0d2",
+  "paper_color": "#fff8f0",
+  "text_color": "#4a3227",
+  "muted_color": "#8a6a58",
+  "accent_color": "#a55233",
+  "secondary_accent_color": "#e6c4a8",
+  "border_color": "#ddbea8"
+}

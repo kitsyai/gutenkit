@@ -1,0 +1,9 @@
+{
+  "name": "wedding_invitation_minimal",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Minimal editorial invitation with refined typography, lots of whitespace, and a modern clean composition.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

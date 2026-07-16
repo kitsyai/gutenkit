@@ -1,0 +1,9 @@
+{
+  "name": "ring_ceremony_invitation_garden",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Garden ring ceremony invitation with sage botanicals and fresh daylight styling.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

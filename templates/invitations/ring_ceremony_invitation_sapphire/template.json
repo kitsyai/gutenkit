@@ -1,0 +1,9 @@
+{
+  "name": "ring_ceremony_invitation_sapphire",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Sapphire evening ring ceremony invitation with celestial drama and deep luxe tones.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

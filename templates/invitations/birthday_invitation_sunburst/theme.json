@@ -1,0 +1,12 @@
+{
+  "font_family": "'Verdana', 'Segoe UI', sans-serif",
+  "display_font_family": "'Gill Sans', 'Trebuchet MS', sans-serif",
+  "bg_color": "#fff0cf",
+  "paper_color": "#fffaf0",
+  "text_color": "#4a2d20",
+  "muted_color": "#936248",
+  "accent_color": "#ff7a21",
+  "accent_two_color": "#ffd166",
+  "accent_three_color": "#ffb703",
+  "border_color": "#f0d1a2"
+}

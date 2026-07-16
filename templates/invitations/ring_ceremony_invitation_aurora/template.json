@@ -1,0 +1,9 @@
+{
+  "name": "ring_ceremony_invitation_aurora",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Aurora-inspired ring ceremony invitation with radiant gradients and luminous portrait styling.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

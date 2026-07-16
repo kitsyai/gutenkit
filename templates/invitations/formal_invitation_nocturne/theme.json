@@ -1,0 +1,11 @@
+{
+  "font_family": "'Arial', sans-serif",
+  "display_font_family": "'Bodoni MT', serif",
+  "bg_color": "#09131f",
+  "paper_color": "#111c2b",
+  "text_color": "#f4eee4",
+  "muted_color": "#b8bfd0",
+  "accent_color": "#d4a24c",
+  "secondary_accent_color": "#60a5fa",
+  "border_color": "#24334d"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "birthday_invitation_carnival",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Carnival birthday invitation with striped tents, badge motifs, and lively fairground color.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

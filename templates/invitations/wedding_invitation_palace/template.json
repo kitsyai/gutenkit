@@ -1,0 +1,9 @@
+{
+  "name": "wedding_invitation_palace",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Palace-inspired invitation with carved frame placeholders, regal symmetry, and heritage gold styling.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

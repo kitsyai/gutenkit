@@ -1,0 +1,9 @@
+{
+  "name": "birthday_invitation_galaxy",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Galaxy birthday invitation with cosmic gradients, orbit motifs, and starry party drama.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

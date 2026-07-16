@@ -1,0 +1,9 @@
+{
+  "name": "formal_invitation_meridian",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Meridian formal invitation with geometric teal panels, a contemporary grid layout, and summit-style event details.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

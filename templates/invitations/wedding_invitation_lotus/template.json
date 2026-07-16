@@ -1,0 +1,9 @@
+{
+  "name": "wedding_invitation_lotus",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Lotus-centered ceremonial invitation with spiritual motifs, warm blush tones, and vertical balance.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}
