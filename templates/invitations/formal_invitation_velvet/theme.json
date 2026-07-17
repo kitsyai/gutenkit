@@ -1,0 +1,11 @@
+{
+  "font_family": "'Gill Sans', 'Segoe UI', sans-serif",
+  "display_font_family": "'Baskerville', 'Times New Roman', serif",
+  "bg_color": "#2b1119",
+  "paper_color": "#fff8f5",
+  "text_color": "#381b24",
+  "muted_color": "#7a5a64",
+  "accent_color": "#7f1d3a",
+  "secondary_accent_color": "#e7c9b8",
+  "border_color": "#ddb6b0"
+}

@@ -1,0 +1,11 @@
+{
+  "font_family": "'Trebuchet MS', 'Segoe UI', sans-serif",
+  "display_font_family": "'Garamond', serif",
+  "bg_color": "#f5ece7",
+  "paper_color": "#fffaf8",
+  "text_color": "#4b3441",
+  "muted_color": "#8c6f7a",
+  "accent_color": "#b76e79",
+  "secondary_accent_color": "#f1d8d8",
+  "border_color": "#e9cfd3"
+}

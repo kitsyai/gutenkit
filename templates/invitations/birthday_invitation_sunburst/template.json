@@ -1,0 +1,9 @@
+{
+  "name": "birthday_invitation_sunburst",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Sunburst birthday invitation with retro rays, warm citrus tones, and upbeat celebration rhythm.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

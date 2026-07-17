@@ -1,0 +1,11 @@
+{
+  "font_family": "'Georgia', 'Times New Roman', serif",
+  "script_font_family": "'Lucida Handwriting', 'Segoe Script', cursive",
+  "bg_color": "#f7ebe8",
+  "paper_color": "#fff7f3",
+  "text_color": "#6a2f32",
+  "muted_color": "#9d6b57",
+  "accent_color": "#a63c42",
+  "secondary_accent_color": "#d7a66d",
+  "border_color": "#e5c4a6"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "ring_ceremony_invitation_modern",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Bold modern ring ceremony invitation with coral gradients and energetic typography.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "ring_ceremony_invitation_royal",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Regal ring ceremony invitation with emerald and gold heritage styling.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

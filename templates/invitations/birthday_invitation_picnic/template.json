@@ -1,0 +1,9 @@
+{
+  "name": "birthday_invitation_picnic",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Picnic birthday invitation with gingham textures, cheerful cards, and breezy outdoor party styling.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

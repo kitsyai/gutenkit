@@ -1,0 +1,11 @@
+{
+  "font_family": "'Garamond', 'Georgia', serif",
+  "script_font_family": "'Great Vibes', 'Segoe Script', cursive",
+  "bg_color": "#f7ebd7",
+  "paper_color": "#fffaf0",
+  "text_color": "#73461f",
+  "muted_color": "#9c7147",
+  "accent_color": "#b67b2b",
+  "secondary_accent_color": "#ead1a8",
+  "border_color": "#ddb57d"
+}

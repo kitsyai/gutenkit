@@ -1,0 +1,11 @@
+{
+  "font_family": "'Georgia', serif",
+  "display_font_family": "'Palatino Linotype', 'Book Antiqua', serif",
+  "bg_color": "#101828",
+  "paper_color": "#fbf7ef",
+  "text_color": "#2d2430",
+  "muted_color": "#6f6171",
+  "accent_color": "#9f7a2f",
+  "secondary_accent_color": "#1d3557",
+  "border_color": "#d9c79f"
+}

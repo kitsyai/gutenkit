@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+:root{--font:{{ theme.font_family | default: "'Helvetica Neue', Arial, sans-serif" }};--display:{{ theme.script_font_family | default: "'Playfair Display', Georgia, serif" }};--bg:{{ theme.bg_color | default:"#f6f2ea" }};--paper:{{ theme.paper_color | default:"#fffefc" }};--text:{{ theme.text_color | default:"#222222" }};--muted:{{ theme.muted_color | default:"#777777" }};--accent:{{ theme.accent_color | default:"#b88b5d" }};--border:{{ theme.border_color | default:"#e3d9cb" }};}
+    @page{size:5in 7in;margin:0}
+    *{box-sizing:border-box} body{margin:0;min-height:100vh;padding:24px;font-family:var(--font);background:var(--bg);color:var(--text);display:flex;justify-content:center;align-items:flex-start}
+    .card{width:5in;min-height:7in;margin:0;background:var(--paper);border:1px solid var(--border);border-radius:24px;padding:36px;box-shadow:0 18px 42px rgba(0,0,0,.04)}
+    .layout{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+    .eyebrow{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+    .name{margin:0;font-family:var(--display);font-size:60px;line-height:1;color:var(--text)}
+    .join{margin:6px 0 10px;font-size:18px;color:var(--accent)}
+    .message{font-size:19px;line-height:1.8;color:var(--muted);max-width:420px;margin-top:18px}
+    .side{border-left:1px solid var(--border);padding-left:26px}
+    .block{margin-bottom:18px}
+    .label{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+    .value{font-size:24px;line-height:1.5;font-family:var(--display)}
+    .footer{margin-top:16px;font-size:15px;color:var(--muted)}
+    @media (max-width:720px){.layout{grid-template-columns:1fr}.side{border-left:0;border-top:1px solid var(--border);padding-left:0;padding-top:22px}.name{font-size:46px}}
+  </style></head><body><div class="card"><div class="layout"><div><div class="eyebrow">{{ eyebrow }}</div><p class="name">{{ couple.partner_one }}</p><div class="join">&amp;</div><p class="name">{{ couple.partner_two }}</p><div class="message">{{ message }}</div></div><div class="side"><div class="block"><div class="label">Date</div><div class="value">{{ date_line }}</div></div><div class="block"><div class="label">Venue</div><div class="value">{{ venue_line }}</div></div><div class="footer">{{ footer_note }}</div></div></div></div><script data-preview-fit="true">
+(function(){
+  function boot(){
+    const root = document.body && document.body.firstElementChild;
+    if (!root || document.body.dataset.previewFitApplied) return;
+    document.body.dataset.previewFitApplied = 'true';
+
+    const style = document.createElement('style');
+    style.textContent = [
+      'html,body{height:100%;}',
+      'body{overflow:hidden !important;padding:0 !important;display:block !important;min-height:100vh !important;}',
+      '.preview-shell{width:100vw;height:100vh;display:flex;justify-content:center;align-items:center;padding:20px;overflow:hidden;background:inherit;}',
+      '.preview-stage{transform-origin:center center;will-change:transform;}',
+      '@media (max-width:640px){.preview-shell{padding:12px;}}'
+    ].join('');
+    document.head.appendChild(style);
+
+    const shell = document.createElement('div');
+    shell.className = 'preview-shell';
+    const stage = document.createElement('div');
+    stage.className = 'preview-stage';
+
+    document.body.insertBefore(shell, root);
+    shell.appendChild(stage);
+    stage.appendChild(root);
+
+    function fit(){
+      stage.style.transform = 'none';
+      stage.style.width = 'auto';
+      const bounds = root.getBoundingClientRect();
+      const naturalWidth = Math.max(root.scrollWidth, root.offsetWidth, Math.ceil(bounds.width));
+      const naturalHeight = Math.max(root.scrollHeight, root.offsetHeight, Math.ceil(bounds.height));
+      const shellWidth = Math.max(shell.clientWidth - 24, 0);
+      const shellHeight = Math.max(shell.clientHeight - 24, 0);
+      const scale = Math.min(shellWidth / naturalWidth, shellHeight / naturalHeight, 1);
+      stage.style.width = naturalWidth + 'px';
+      stage.style.height = naturalHeight + 'px';
+      stage.style.transform = 'scale(' + Math.max(scale * 0.96, 0.01) + ')';
+    }
+
+    requestAnimationFrame(() => requestAnimationFrame(fit));
+    window.addEventListener('resize', fit);
+    window.addEventListener('load', fit, { once: true });
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(fit).catch(() => {});
+    }
+    setTimeout(fit, 120);
+    setTimeout(fit, 400);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot, { once: true });
+  } else {
+    boot();
+  }
+})();
+</script>
+</body></html>

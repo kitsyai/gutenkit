@@ -1,0 +1,45 @@
+{
+  "eyebrow": "Garden Wedding",
+  "couple": {
+    "partner_one": "Kabir Nanda",
+    "partner_two": "Meher Arora"
+  },
+  "host_line": "Together with their families",
+  "message": "joyfully invite you to an intimate celebration of marriage filled with flowers, blessings, and the warmth of loved ones.",
+  "date_line": "Sunday, 14 March 2027",
+  "time_line": "Ceremony at 5:30 PM | Dinner at 8:00 PM",
+  "venue_name": "The Glasshouse Garden Estate",
+  "venue_address": "Rosewood Valley, Dehradun, Uttarakhand",
+  "family_lines": [
+    "Son of Nidhi and Rohan Nanda",
+    "Daughter of Anjali and Manav Arora"
+  ],
+  "event_highlights": [
+    "Open-air vows beneath a floral arch",
+    "Live acoustic music and candlelit dinner",
+    "Handcrafted desserts and family blessings"
+  ],
+  "schedule": [
+    {
+      "name": "Welcome High Tea",
+      "time": "4:00 PM",
+      "detail": "Guests are welcomed with floral refreshments and light music in the garden lounge."
+    },
+    {
+      "name": "Wedding Ceremony",
+      "time": "5:30 PM",
+      "detail": "Exchange of vows, varmala, and sacred rituals under an evening sky."
+    },
+    {
+      "name": "Dinner Reception",
+      "time": "8:00 PM",
+      "detail": "A slow candlelit dinner with speeches, music, and celebration."
+    }
+  ],
+  "rsvp_title": "Please RSVP",
+  "rsvp_lines": [
+    "Ayesha Nanda | +91 98111 22334",
+    "Ritvik Arora | +91 98989 44556"
+  ],
+  "footer_note": "Your presence will make our garden celebration even more beautiful."
+}

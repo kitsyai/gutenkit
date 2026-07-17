@@ -1,0 +1,12 @@
+{
+  "font_family": "'Book Antiqua', Georgia, serif",
+  "display_font_family": "'Lucida Calligraphy', 'Palatino Linotype', serif",
+  "bg_color": "#f6efe4",
+  "paper_color": "#fffaf2",
+  "text_color": "#4e3b2f",
+  "muted_color": "#917360",
+  "accent_color": "#bb7b6f",
+  "accent_two_color": "#d7bc84",
+  "accent_three_color": "#efe0c4",
+  "border_color": "#e6d5bd"
+}

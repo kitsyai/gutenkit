@@ -1,0 +1,11 @@
+{
+  "font_family": "'Avenir Next', 'Segoe UI', sans-serif",
+  "script_font_family": "'Playfair Display', Georgia, serif",
+  "bg_color": "#efe3cf",
+  "paper_color": "#f7eddc",
+  "text_color": "#293041",
+  "muted_color": "#6f6a61",
+  "accent_color": "#1f3557",
+  "secondary_accent_color": "#c99169",
+  "border_color": "#d6c2a2"
+}

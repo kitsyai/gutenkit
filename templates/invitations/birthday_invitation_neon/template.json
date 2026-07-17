@@ -1,0 +1,9 @@
+{
+  "name": "birthday_invitation_neon",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Neon birthday invitation with glowing gradients, poster styling, and after-dark celebration vibes.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

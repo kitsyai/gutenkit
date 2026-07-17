@@ -1,0 +1,9 @@
+{
+  "name": "formal_invitation_heritage",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Heritage formal invitation with warm terracotta bands, archival character, and a ceremonial foundation-launch format.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

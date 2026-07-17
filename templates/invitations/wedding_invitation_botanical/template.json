@@ -1,0 +1,9 @@
+{
+  "name": "wedding_invitation_botanical",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Botanical wedding invitation with sage tones, arch framing, and a soft garden-style ceremony layout.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

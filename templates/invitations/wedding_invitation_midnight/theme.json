@@ -1,0 +1,11 @@
+{
+  "font_family": "'Cormorant Garamond', 'Georgia', serif",
+  "script_font_family": "'Cinzel Decorative', 'Georgia', serif",
+  "bg_color": "#120f23",
+  "paper_color": "#1d1636",
+  "text_color": "#f4e9d8",
+  "muted_color": "#c4b29b",
+  "accent_color": "#d6ac59",
+  "secondary_accent_color": "#6d5ba7",
+  "border_color": "#3b2d68"
+}

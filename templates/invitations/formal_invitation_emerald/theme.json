@@ -1,0 +1,11 @@
+{
+  "font_family": "'Cambria', serif",
+  "display_font_family": "'Times New Roman', serif",
+  "bg_color": "#14342d",
+  "paper_color": "#f8f4ec",
+  "text_color": "#22312b",
+  "muted_color": "#5a746c",
+  "accent_color": "#1f6b57",
+  "secondary_accent_color": "#c6a96a",
+  "border_color": "#d2c7ae"
+}

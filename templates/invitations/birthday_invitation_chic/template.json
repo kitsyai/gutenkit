@@ -1,0 +1,9 @@
+{
+  "name": "birthday_invitation_chic",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Chic birthday invitation with editorial asymmetry, luxe neutrals, and refined modern contrast.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

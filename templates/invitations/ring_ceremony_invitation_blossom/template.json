@@ -1,0 +1,9 @@
+{
+  "name": "ring_ceremony_invitation_blossom",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Blush blossom ring invitation with petal accents and soft romantic styling.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

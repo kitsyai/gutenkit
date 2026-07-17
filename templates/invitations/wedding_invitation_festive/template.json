@@ -1,0 +1,9 @@
+{
+  "name": "wedding_invitation_festive",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Premium traditional wedding invitation with ornate arch framing, lotus florals, hanging lamps, and ceremonial styling inspired by classic card designs.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

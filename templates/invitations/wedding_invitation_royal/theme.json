@@ -1,0 +1,12 @@
+{
+  "font_family": "'Palatino Linotype', 'Book Antiqua', serif",
+  "script_font_family": "'Lucida Handwriting', 'Brush Script MT', cursive",
+  "bg_color": "#1f1630",
+  "paper_color": "#fff8ef",
+  "text_color": "#3f2434",
+  "muted_color": "#7b5b73",
+  "accent_color": "#7c2d5e",
+  "secondary_accent_color": "#d49b3d",
+  "petal_color": "#f3d7dc",
+  "border_color": "#d7b78a"
+}

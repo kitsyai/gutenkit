@@ -1,0 +1,9 @@
+{
+  "name": "formal_invitation_opaline",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Opaline formal invitation with a pearl side-ribbon layout, rose accents, and refined reception details.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "font_family": "'Courier New', monospace",
+  "display_font_family": "'Arial Black', sans-serif",
+  "bg_color": "#fff4d8",
+  "paper_color": "#fffdf7",
+  "text_color": "#2c2f45",
+  "muted_color": "#6f7291",
+  "accent_color": "#ffcf33",
+  "accent_two_color": "#18f2b2",
+  "accent_three_color": "#ff5d8f",
+  "border_color": "#ffd77b"
+}

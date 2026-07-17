@@ -1,0 +1,9 @@
+{
+  "name": "ring_ceremony_invitation_pearl",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Pearl ivory ring ceremony invitation with embossed framing and formal elegance.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

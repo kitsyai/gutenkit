@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+:root{--font:{{ theme.font_family | default: "'Garamond','Georgia',serif" }};--script:{{ theme.script_font_family | default: "'Great Vibes', 'Segoe Script', cursive" }};--bg:{{ theme.bg_color | default:"#f7ebd7" }};--paper:{{ theme.paper_color | default:"#fffaf0" }};--text:{{ theme.text_color | default:"#73461f" }};--muted:{{ theme.muted_color | default:"#9c7147" }};--accent:{{ theme.accent_color | default:"#b67b2b" }};--soft:{{ theme.secondary_accent_color | default:"#ead1a8" }};--border:{{ theme.border_color | default:"#ddb57d" }};}
+    @page{size:5in 7in;margin:0}
+    *{box-sizing:border-box} body{margin:0;min-height:100vh;padding:24px;background:linear-gradient(180deg,#fcf3e6 0%,var(--bg) 100%);font-family:var(--font);color:var(--text);display:flex;justify-content:center;align-items:flex-start}
+    .frame{width:5in;min-height:7in;margin:0;background:var(--paper);border:1px solid var(--border);border-radius:24px;padding:14px;box-shadow:0 22px 52px rgba(120,79,29,.12)}
+    .inner{position:relative;border:3px solid rgba(182,123,43,.42);border-radius:18px;padding:28px 26px 24px;text-align:center;overflow:hidden}
+    .inner:before,.inner:after{content:"";position:absolute;top:0;bottom:0;width:62px;background:linear-gradient(180deg,rgba(234,209,168,.75),rgba(255,250,240,.2));border-left:1px solid rgba(182,123,43,.22);border-right:1px solid rgba(182,123,43,.22)}
+    .inner:before{left:0}.inner:after{right:0}
+    .arch{position:relative;max-width:520px;margin:0 auto;padding:32px 20px 22px;border:1px solid rgba(221,181,125,.92);border-top-left-radius:240px;border-top-right-radius:240px;border-bottom-left-radius:14px;border-bottom-right-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,.94),rgba(255,248,236,.96))}
+    .om{font-size:28px;color:var(--accent);margin-bottom:8px}.eyebrow{color:var(--muted);letter-spacing:.18em;text-transform:uppercase;font-size:13px}
+    .name{margin:10px 0 0;font-family:var(--script);font-size:54px;color:var(--accent);line-height:1}.join{font-size:30px;color:var(--muted);margin:6px 0}.message{max-width:440px;margin:14px auto 18px;font-size:19px;line-height:1.8;color:var(--muted)}
+    .date{margin:18px auto 14px}.month{font-size:18px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}.row{display:flex;justify-content:center;gap:14px;align-items:flex-end;margin:8px 0}.day{font-size:62px;line-height:.9;color:var(--accent);font-weight:700}.mini{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}.venue{font-size:18px;line-height:1.7;color:var(--text)}.footer{margin-top:14px;color:var(--muted);font-size:16px}
+    @media (max-width:720px){.inner:before,.inner:after{display:none}.name{font-size:42px}.day{font-size:48px}}
+  </style></head><body><div class="frame"><div class="inner"><div class="arch"><div class="om">ॐ</div><div class="eyebrow">{{ eyebrow }}</div><p class="name">{{ couple.partner_one }}</p><div class="join">&amp;</div><p class="name">{{ couple.partner_two }}</p><div class="message">{{ message }}</div></div><div class="date"><div class="month">{{ date_month }}</div><div class="row"><div class="mini">{{ weekday }}</div><div class="day">{{ date_day }}</div><div class="mini">{{ time_line }}</div></div><div class="mini">{{ date_year }}</div></div><div class="venue">{{ venue_name }}</div><div class="footer">{{ footer_note }}</div></div></div><script data-preview-fit="true">
+(function(){
+  function boot(){
+    const root = document.body && document.body.firstElementChild;
+    if (!root || document.body.dataset.previewFitApplied) return;
+    document.body.dataset.previewFitApplied = 'true';
+
+    const style = document.createElement('style');
+    style.textContent = [
+      'html,body{height:100%;}',
+      'body{overflow:hidden !important;padding:0 !important;display:block !important;min-height:100vh !important;}',
+      '.preview-shell{width:100vw;height:100vh;display:flex;justify-content:center;align-items:center;padding:20px;overflow:hidden;background:inherit;}',
+      '.preview-stage{transform-origin:center center;will-change:transform;}',
+      '@media (max-width:640px){.preview-shell{padding:12px;}}'
+    ].join('');
+    document.head.appendChild(style);
+
+    const shell = document.createElement('div');
+    shell.className = 'preview-shell';
+    const stage = document.createElement('div');
+    stage.className = 'preview-stage';
+
+    document.body.insertBefore(shell, root);
+    shell.appendChild(stage);
+    stage.appendChild(root);
+
+    function fit(){
+      stage.style.transform = 'none';
+      stage.style.width = 'auto';
+      const bounds = root.getBoundingClientRect();
+      const naturalWidth = Math.max(root.scrollWidth, root.offsetWidth, Math.ceil(bounds.width));
+      const naturalHeight = Math.max(root.scrollHeight, root.offsetHeight, Math.ceil(bounds.height));
+      const shellWidth = Math.max(shell.clientWidth - 24, 0);
+      const shellHeight = Math.max(shell.clientHeight - 24, 0);
+      const scale = Math.min(shellWidth / naturalWidth, shellHeight / naturalHeight, 1);
+      stage.style.width = naturalWidth + 'px';
+      stage.style.height = naturalHeight + 'px';
+      stage.style.transform = 'scale(' + Math.max(scale * 0.96, 0.01) + ')';
+    }
+
+    requestAnimationFrame(() => requestAnimationFrame(fit));
+    window.addEventListener('resize', fit);
+    window.addEventListener('load', fit, { once: true });
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(fit).catch(() => {});
+    }
+    setTimeout(fit, 120);
+    setTimeout(fit, 400);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot, { once: true });
+  } else {
+    boot();
+  }
+})();
+</script>
+</body></html>

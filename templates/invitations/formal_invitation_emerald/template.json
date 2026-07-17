@@ -1,0 +1,9 @@
+{
+  "name": "formal_invitation_emerald",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Emerald formal invitation with a split-column estate layout, serif headlines, and a dignified program panel.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "formal_invitation_porcelain",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Porcelain formal invitation with pale blue framing, delicate linework, and a classic society-event composition.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

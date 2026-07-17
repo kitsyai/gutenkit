@@ -1,0 +1,9 @@
+{
+  "name": "birthday_invitation_arcade",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Arcade birthday invitation with pixel blocks, retro game styling, and bold playful typography.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

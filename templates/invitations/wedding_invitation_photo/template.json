@@ -1,0 +1,9 @@
+{
+  "name": "wedding_invitation_photo",
+  "kind": "document",
+  "renderer": "liquid",
+  "description": "Photo-led invitation with a portrait placeholder, botanical edge accents, and a modern storybook layout.",
+  "parts": {
+    "html": "@html.liquid"
+  }
+}

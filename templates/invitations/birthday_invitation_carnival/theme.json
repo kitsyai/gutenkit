@@ -1,0 +1,12 @@
+{
+  "font_family": "'Tahoma', sans-serif",
+  "display_font_family": "'Arial Black', sans-serif",
+  "bg_color": "#fff3e7",
+  "paper_color": "#fffaf4",
+  "text_color": "#4d2b2a",
+  "muted_color": "#8f5d54",
+  "accent_color": "#ef476f",
+  "accent_two_color": "#ffd166",
+  "accent_three_color": "#118ab2",
+  "border_color": "#f1d2c4"
+}

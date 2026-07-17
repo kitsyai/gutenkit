@@ -1,0 +1,11 @@
+{
+  "font_family": "'Helvetica Neue', Arial, sans-serif",
+  "script_font_family": "'Playfair Display', 'Georgia', serif",
+  "bg_color": "#f4f0e9",
+  "paper_color": "#fffdf9",
+  "text_color": "#1f1d1a",
+  "muted_color": "#7c7469",
+  "accent_color": "#b48853",
+  "secondary_accent_color": "#e7d8c7",
+  "border_color": "#ddd2c4"
+}
